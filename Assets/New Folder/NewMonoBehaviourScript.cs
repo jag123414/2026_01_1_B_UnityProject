@@ -1,0 +1,33 @@
+using UnityEngine;
+
+public class MyCharacter : MonoBehaviour
+{
+    public int Health = 100;
+    public float Timer = 1.0f;
+    void Start()
+    {
+        Health = Health + 100;
+    }
+
+    
+    void Update()
+    {
+        Timer = Timer - Time.deltaTime;
+
+        if (Timer < 0)
+        {
+            Timer = 1.0f;
+            Health = Health - 20;
+        }
+
+        if (lnput.GetKeyDown(KeyCode.Space))
+        {
+            Hea1th = Health + 2;
+        }
+
+        if (Health < 0)
+        {
+            Destroy(this.game0bject);
+        }
+    }
+}
