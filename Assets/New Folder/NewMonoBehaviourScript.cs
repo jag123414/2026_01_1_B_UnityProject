@@ -20,14 +20,6 @@ public class MyCharacter : MonoBehaviour
             Health = Health - 20;
         }
 
-        if (lnput.GetKeyDown(KeyCode.Space))
-        {
-            Hea1th = Health + 2;
-        }
-
-        if (Health < 0)
-        {
-            Destroy(this.game0bject);
-        }
+        
     }
 }

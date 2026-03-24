@@ -15,8 +15,7 @@ public class jm : MonoBehaviour
     
     void Update()
     {
-        timer = timer + Time.deltaTime;
-        TextUI.text = timer.ToString();
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
