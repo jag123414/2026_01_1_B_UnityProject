@@ -65,9 +65,14 @@ public class FruitGame : MonoBehaviour
     // 과일이 합쳐질 때 호출되는 함수
     public void SpawnNextFruit(int nextType, Vector3 position)
     {
-        // 마지막 단계 과일이면 더 이상 생성 안 함
-        if (nextType();
+        // 마지막 단계 과일이거나 배열 범위를 벗어나면 생성 안 함
+        if (nextType < 0 || nextType >= fruitPrefabs.Length)
+        {
+            return;
+        }
+
+        GameObject nextFruit = Instantiate(fruitPrefabs[nextType], position, Quaternion.identity);
+        Rigidbody2D rb = nextFruit.GetComponent<Rigidbody2D>();
         if (rb != null) rb.simulated = true;
     }
-}
 }
